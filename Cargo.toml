@@ -3,8 +3,5 @@ name = "learningrust"
 version = "0.1.0"
 edition = "2024"
 
-#[[bin]]
-#name = "hello"
-#path = "src/bin/"
-
 [dependencies]
+rand = "0.8.5"
