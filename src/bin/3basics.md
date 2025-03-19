@@ -91,3 +91,35 @@ let tup: (i32, u8, f64) = (500, 1, 6.5);
 let tup: (i32, u8, f64) = (500, 1, 6.5);
 let (x, y, z) = tup; //x=500, y=1, z=6.5
 ```
+
+Or you can use dots to do access that like a property
+
+```rust
+let tup: (i32, u8, f64) = (500, 1, 6.5);
+let x = tup.0;
+let y = tup.1;
+let z = tup.2;
+```
+
+#### Arrays
+
+It works like tuples, but every element of an array should have one type. Rust arrays have constant length.
+
+```rust
+let months = ["January", "February", "March"];
+```
+
+```rust
+let a = [1, 2, 3, 4, 5, 6];
+
+let first = a[0]; // 1
+let second = a[1]; // 2
+```
+
+You can also use things like `a[n-1]` or `a[i]` too.
+
+```rust
+let i = 2;
+let a = [2, 5, 4];
+println!("The last element is {}", a[i]);
+```
