@@ -123,3 +123,53 @@ let i = 2;
 let a = [2, 5, 4];
 println!("The last element is {}", a[i]);
 ```
+
+## Functions
+
+```rust
+fn function_name(){
+	// Code goes here
+}
+```
+
+function names could only be written in `snake_case`
+
+```rust
+fn main(){
+	some_func(5, 3.14)
+}
+fn some_func(x: i32, y: f32){
+	println!("{x}, {y}");
+}
+```
+
+## Statements & Expressions
+
+In Rust Functions are made of statements and they can end in expressions. Rust is a expression based language.
+
+- **Statements** are instructions that perform some action and do not return a value.
+`let y = 6;` is a statement.
+Statements do not return values. 
+```rust
+//THIS CODE DOES NOT RUN
+let x = (let y = 6);
+```
+**Expressions** evaluate to a resultant value. Let’s look at some examples.
+Calling a function is an expression. Calling a macro is an expression. A new scope block created with curly brackets is an expression.
+```rust
+	let y = {
+        let x = 3;
+        x + 1
+    };
+
+    println!("The value of y is: {y}"); // The value of y is: 4
+```
+This expression:
+```rust
+{
+    let x = 3;
+    x + 1
+}
+```
+is a block that, in this case, evaluates to 4. That value gets bound to y as part of the let statement. Note that the x + 1 line doesn’t have a semicolon at the end, which is unlike most of the lines you’ve seen so far. Expressions do not include ending semicolons. If you add a semicolon to the end of an expression, you turn it into a statement, and it will then not return a value. Keep this in mind as you explore function return values and expressions next.
+
