@@ -65,14 +65,29 @@ Floating points are the same (f32, f64, ...)
 
 *Operations are the same as other languages so I won't say anything go on and read* **the book** *for yourselves;)*
 
-#### Boolean
+#### Booleans
 ```rust
 let t = true;
-let f: bool = false;//with ecplicit type annotation.
+let f: bool = false; //with explicit type annotation.
 ```
 
-#### Character
+#### Characters
+
 - Every **character** is 4 bytes in Rust.
 - Every **character** is UTF-8 encoded in Rust.
 
 ### Compound Types
+
+#### Tuples
+
+Tuples can show different values in one group.
+```rust
+let tup: (i32, u8, f64) = (500, 1, 6.5);
+```
+##### Accessing Values in a Tuple
+ You can access values in a tuple by asigning them to variables.
+
+```rust
+let tup: (i32, u8, f64) = (500, 1, 6.5);
+let (x, y, z) = tup; //x=500, y=1, z=6.5
+```
